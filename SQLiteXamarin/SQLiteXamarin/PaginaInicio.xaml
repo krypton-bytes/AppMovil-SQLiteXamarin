@@ -1,0 +1,74 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="SQLiteXamarin.PaginaInicio"
+          Title="Inicio">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
+            <Label Text="Formularios" FontSize="30" HorizontalTextAlignment="Center" Margin="0,50,0,20"/>
+
+            <!-- Botones de navegación -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,0">
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,0">
+                    <Label Text="Artista" HorizontalTextAlignment="Center"/>
+                    <ImageButton x:Name="artista" Source="artista_icon.png" WidthRequest="80" HeightRequest="80"
+                          Clicked="artistaButton_Clicked">
+                        <!-- VisualStateManager -->
+                    </ImageButton>
+                </StackLayout>
+                <!-- Boton de discografia -->
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,0">
+                    <Label Text="Discografía" HorizontalTextAlignment="Center"/>
+                    <ImageButton x:Name="discografia" Source="discografia.png" WidthRequest="80" HeightRequest="80"
+                          Clicked="discografiaButton_Clicked">
+                        <!-- VisualStateManager -->
+                    </ImageButton>
+                </StackLayout>
+                <!-- Boton de canciones -->
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,0">
+                    <Label Text="Música" HorizontalTextAlignment="Center"/>
+                    <ImageButton x:Name="musica" Source="musica.png" WidthRequest="80" HeightRequest="80"
+                          Clicked="musicaButton_Clicked">
+                        <!-- VisualStateManager -->
+                    </ImageButton>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Botones de registros -->
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0">
+                <Label Text="Registros" FontSize="30" HorizontalTextAlignment="Center" Margin="0,50,0,20"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,0">
+                    <!-- Boton de registros de artista -->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,0">
+
+                        <ImageButton x:Name="artista_registro" Source="artista_registro_icon.png" WidthRequest="80" HeightRequest="80"
+                          Clicked="artista_registro_Clicked">
+                            <!-- VisualStateManager -->
+                        </ImageButton>
+                        <Label Text="Registros Artista" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <!-- Boton de registros de discografia -->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,0">
+
+                        <ImageButton x:Name="discografia_registro" Source="discografia_registro_icon.png" WidthRequest="80" HeightRequest="80"
+                          Clicked="discografia_registro_Clicked">
+                            <!-- VisualStateManager -->
+                        </ImageButton>
+                        <Label Text="Registros Discografía" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <!-- Boton de registros de canciones -->
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Margin="10,0">
+
+                        <ImageButton x:Name="musica_registro" Source="musica_registro_icon.png" WidthRequest="80" HeightRequest="80" Clicked="musica_registro_Clicked">
+                            <!-- VisualStateManager -->
+                        </ImageButton>
+                        <Label Text="Registros Música" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <!-- Pie de página -->
+            <StackLayout Grid.Row="2" Padding="20, 0, 20, 40" VerticalOptions="End">
+                <Label Text="© 2023 Derechos Reservados" FontSize="12" TextColor="#9B9B9B" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

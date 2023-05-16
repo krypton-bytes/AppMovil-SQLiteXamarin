@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SQLiteXamarin.RegistrosCancionesView"
+             Title="Registros canciones">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <ListView x:Name="listView" BackgroundColor="#F0F0F0">
+                <ListView.Header>
+                    <Grid BackgroundColor="#CCCCCC">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="ID" FontSize="14" TextColor="#333333" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+                        <Label Text="Nombre" FontSize="14" TextColor="#333333" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Grid.Column="1" />
+                        <Label Text="Nombre Artista" FontSize="14" TextColor="#333333" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Grid.Column="2" />
+                        <Label Text="Nombre Discografia" FontSize="14" TextColor="#333333" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Grid.Column="3" />
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="10" Margin="5" CornerRadius="5" HasShadow="True" BackgroundColor="#FFFFFF">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding ID}" FontSize="12" TextColor="#333333" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
+                                    <Label Text="{Binding Nombre}" FontSize="12" TextColor="#666666" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Grid.Column="1" />
+                                    <Label Text="{Binding Artista.NombreArtista}" FontSize="12" TextColor="#888888" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Grid.Column="2" />
+                                    <Label Text="{Binding Discografia.Nombre}" FontSize="12" TextColor="#888888" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Grid.Column="3" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
